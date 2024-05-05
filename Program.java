@@ -32,8 +32,6 @@ public class Program {
 		return cislo;
 	}
 	
-
-//pokud je zadáno A - ano, vrací true, pokud zadáno N - ne, vrací false, jinak vrací vyjímku
 	public static boolean anoNe (Scanner sc)
 	{
 		boolean volba;	
@@ -78,7 +76,6 @@ public class Program {
 			System.out.println("7...Uložení jedné knihy do souboru");
 			System.out.println("8...Načtení knihy ze souboru");
 			System.out.println("9...Ukončení programu");
-//pracovní přidání knih
 			System.out.println("10...Přidat 10 různých knih");
 			
 			volba=pouzeCelaCisla(sc);
@@ -161,7 +158,6 @@ public class Program {
 							
 							if(anoNe(sc))
 							{
-//zde možná přidat kontrolu, jestli už ta kniha neexistuje podle názvu
 								seznamVsechKnih.add(roman);
 								System.out.println("Kniha přidána");
 							}
@@ -196,7 +192,6 @@ public class Program {
 							System.out.println("Opravdu chcete přidat knihu: " +ucebnice.toString());
 							if(anoNe(sc))
 							{	
-//zde možná přidat kontrolu, jestli už ta kniha neexistuje podle názvu
 								seznamVsechKnih.add(ucebnice);
 								System.out.println("Kniha přidána");
 							}
@@ -721,7 +716,6 @@ public class Program {
 					run = false;
 					break;
 					
-//zde kód pro pracovní přidání knih
 				case 10:
 					seznamVsechKnih.add(new Roman("1984", new ArrayList<String>() {{add("George Orwell");}}, 1948, true, Zanr.realistický));
 					seznamVsechKnih.add(new Roman("Zločin a Trest", new ArrayList<String>() {{add("Fjodor Michajlovič Dostojevskij");}}, 1866, false, Zanr.realistický));
